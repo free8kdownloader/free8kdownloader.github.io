@@ -1,0 +1,36 @@
+{
+  "latest": {
+    "version": "2.0.4",
+    "url": "",
+    "sha256": "",
+    "size": 0,
+    "notes": "",
+    "mandatory": false,
+    "minVersion": ""
+  },
+  "latestMac": {},
+  "message": {},
+  "sponsors": [],
+  "sponsorRotateSeconds": 30,
+  "analytics": {
+    "enabled": false,
+    "measurementId": "",
+    "apiSecret": ""
+  },
+  "forceEngineUpdate": false,
+  "disabled": false,
+  "disabledMessage": "",
+  "freeDailyLimit": 10,
+  "buy": {
+    "amount": "$5",
+    "price": "$5 · one-time payment · lifetime",
+    "text": "Pay securely on our website by card or PayPal. Your license key is e-mailed to you right after payment.",
+    "contact": "",
+    "url": "https://free8kdownloader.com/#pro",
+    "button": "Buy Pro · $5",
+    "checkout": ""
+  },
+  "nudgeAfter": 7,
+  "windowsStore": "",
+  "licenseServer": "https://free8k-license.jonydas20001.workers.dev"
+}
