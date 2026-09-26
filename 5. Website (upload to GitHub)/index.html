@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free 8K Downloader — original quality video, audio and images</title>
+<meta name="description" content="Download video in original quality up to 8K, audio exactly as the original, and full-size images. For Windows and Mac.">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<style>
+:root { --bg:#080B10; --s:#10151C; --line:#232C38; --ink:#E7EDF4; --ink2:#A0AEBE; --acc:#4C8DFF; --gold1:#FFD67A; --gold2:#E9A92E; --ok:#3CCB95; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 "Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,Roboto,sans-serif; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+header { display: flex; align-items: center; gap: 12px; padding: 20px 0; }
+header img { width: 40px; height: 40px; border-radius: 10px; }
+header b { font-size: 18px; } header b em { font-style: normal; color: var(--gold1); }
+header nav { margin-left: auto; display: flex; gap: 18px; font-size: 14px; }
+header a { color: var(--ink2); text-decoration: none; } header a:hover { color: var(--ink); }
+.hero { text-align: center; padding: 70px 0 50px; background: radial-gradient(600px 260px at 50% 0%, rgba(76,141,255,.18), transparent 70%); }
+.hero h1 { font-size: clamp(34px, 6vw, 56px); line-height: 1.1; margin: 0 0 16px; letter-spacing: -.02em; text-wrap: balance; }
+.hero h1 em { font-style: normal; background: linear-gradient(180deg,var(--gold1),var(--gold2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero p { color: var(--ink2); font-size: 18px; max-width: 620px; margin: 0 auto 30px; }
+.dl { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn { display: inline-flex; flex-direction: column; align-items: center; padding: 14px 26px; border-radius: 14px; text-decoration: none; font-weight: 700; color: #fff; background: linear-gradient(180deg,#6AA5FF,#2F6BFF); box-shadow: 0 8px 24px rgba(47,107,255,.35); min-width: 220px; }
+.btn small { font-weight: 500; opacity: .85; font-size: 12.5px; }
+.btn.mac { background: #1B222C; box-shadow: none; border: 1px solid var(--line); }
+.ladder { display: flex; gap: 6px; justify-content: center; align-items: flex-end; height: 90px; margin: 40px 0 0; }
+.ladder span { width: 56px; border-radius: 6px 6px 3px 3px; background: #1B222C; border: 1px solid var(--line); font-size: 11px; font-weight: 700; color: var(--ink2); display: flex; align-items: flex-end; justify-content: center; padding-bottom: 5px; }
+.ladder .k4 { background: linear-gradient(180deg,#6AA5FF,#2F6BFF); color: #fff; border: 0; } .ladder .k8 { background: linear-gradient(180deg,var(--gold1),var(--gold2)); color: #221600; border: 0; width: 70px; }
+section { padding: 50px 0; }
+h2 { font-size: 28px; margin: 0 0 24px; text-align: center; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.card { background: var(--s); border: 1px solid var(--line); border-radius: 16px; padding: 20px; }
+.card h3 { margin: 0 0 6px; font-size: 17px; } .card p { margin: 0; color: var(--ink2); font-size: 14.5px; }
+.price { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; max-width: 760px; margin: 0 auto; }
+.plan { background: var(--s); border: 1px solid var(--line); border-radius: 18px; padding: 24px; }
+.plan.pro { border-color: rgba(233,169,46,.6); background: linear-gradient(180deg, rgba(242,181,68,.08), var(--s)); }
+.plan .tag { display: inline-block; padding: 2px 10px; border-radius: 7px; font-size: 12px; font-weight: 800; color: #221600; background: linear-gradient(180deg,var(--gold1),var(--gold2)); }
+.plan .amt { font-size: 34px; font-weight: 800; margin: 8px 0; }
+.plan .per { color: var(--ink2); font-size: 13px; margin: -6px 0 8px; }
+.plan ul { padding-left: 18px; color: var(--ink2); margin: 8px 0 18px; }
+.plan .btn { min-width: 0; width: 100%; }
+.plan.pro .btn { color: #221600; background: linear-gradient(180deg,var(--gold1),var(--gold2)); box-shadow: 0 8px 24px rgba(233,169,46,.3); }
+footer { color: var(--ink2); font-size: 13px; text-align: center; padding: 40px 0; border-top: 1px solid var(--line); }
+.help { max-width: 760px; margin: 22px auto 0; text-align: left; background: var(--s); border: 1px solid var(--line); border-radius: 16px; padding: 4px 20px; font-size: 14.5px; color: var(--ink2); }
+.help summary { cursor: pointer; padding: 12px 0; color: var(--ink); font-weight: 600; }
+.help ol { margin: 0 0 14px; padding-left: 20px; } .help b { color: var(--ink); }
+.btn.store { background: #1B222C; box-shadow: none; border: 1px solid var(--line); }
+footer a { color: var(--ink2); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><img src="logo.svg" alt=""><b>Free <em>8K</em> Downloader</b>
+    <nav><a href="#features">Features</a><a href="#pro">Pro</a><a href="#download">Download</a></nav></header>
+</div>
+<div class="hero"><div class="wrap">
+  <h1>Paste a link. Get the <em>original</em>.</h1>
+  <p>Video in its original resolution up to 8K, audio exactly as the original or MP3 320 kbps, and full-size images from YouTube, Facebook, Instagram, TikTok and 1,800+ sites.</p>
+  <div class="dl" id="download">
+    <a class="btn" href="https://github.com/free8kdownloader/free8kdownloader.github.io/releases/latest/download/Free8KDownloader-Setup.exe" id="winBtn">Download for Windows<small>Windows 10 / 11 · 64-bit</small></a>
+    <a class="btn mac" href="https://github.com/free8kdownloader/free8kdownloader.github.io/releases/latest/download/Free8KDownloader-mac.zip" id="macBtn">Download for Mac<small>macOS 11+ · Apple Silicon & Intel</small></a>
+    <a class="btn store" href="#" id="storeBtn" hidden>Get it from Microsoft<small>Microsoft Store · no warnings, automatic updates</small></a>
+  </div>
+  <details class="help" id="installHelp">
+    <summary>Windows or Mac shows a warning when you open it?</summary>
+    <p>Free 8K Downloader is safe: it contains no ads, no toolbars and nothing that runs in the background. New apps from independent developers are not yet known to Windows and macOS, so they ask you to confirm once.</p>
+    <p><b>Windows — "Windows protected your PC":</b></p>
+    <ol><li>Click <b>More info</b>.</li><li>Click <b>Run anyway</b>.</li></ol>
+    <p id="storeTip" hidden>Tip: install it from the <b>Microsoft Store</b> instead — no warning at all, and updates install themselves.</p>
+    <p><b>Mac — "cannot be opened because Apple cannot check it":</b></p>
+    <ol><li>Click <b>Done</b>.</li><li>Open <b>System Settings → Privacy &amp; Security</b>.</li><li>Scroll down and click <b>Open Anyway</b> next to Free 8K Downloader, then confirm with your password.</li></ol>
+    <p>You only do this once. Always download the app from this website.</p>
+  </details>
+  <div class="ladder" aria-hidden="true"><span style="height:30%">720p</span><span style="height:45%">1080p</span><span style="height:60%">1440p</span><span class="k4" style="height:80%">4K</span><span class="k8" style="height:100%">8K</span></div>
+</div></div>
+<div class="wrap">
+  <section id="features">
+    <h2>Everything in its original quality</h2>
+    <div class="grid">
+      <div class="card"><h3>Up to 8K video</h3><p>Every resolution the site offers, with real file sizes, codec and HDR labels. Never re-encoded.</p></div>
+      <div class="card"><h3>Original audio</h3><p>The exact audio track, bit for bit — or MP3 320, AAC, FLAC and WAV.</p></div>
+      <div class="card"><h3>Playlists & channels</h3><p>Pick the videos you want and one quality for all.</p></div>
+      <div class="card"><h3>Images</h3><p>Full-size photos, thumbnails and whole Instagram / Pinterest posts.</p></div>
+      <div class="card"><h3>One-click updates</h3><p>The app keeps itself and its download engine up to date.</p></div>
+      <div class="card"><h3>Windows & Mac</h3><p>A clean, fast app with dark and light themes.</p></div>
+    </div>
+  </section>
+  <section id="pro">
+    <h2>Free or Pro</h2>
+    <div class="price">
+      <div class="plan"><b>Free</b><div class="amt">$0</div><ul><li>10 downloads every day</li><li>All qualities and formats</li></ul><a class="btn mac" href="#download">Download</a></div>
+      <div class="plan pro"><span class="tag">PRO</span><div class="amt" id="price">$5</div><div class="per">one-time payment</div><ul><li>Unlimited downloads</li><li>Whole playlists in one click</li><li>No sponsor messages</li><li>Lifetime license</li></ul><a class="btn" id="buy" href="#pro">Buy Pro · $5</a></div>
+    </div>
+    <p style="text-align:center;color:var(--ink2);font-size:14px;margin-top:18px" id="howpay">Pay securely by card or PayPal. Your license key is e-mailed to you right after payment.</p>
+  </section>
+</div>
+<footer><div class="wrap">© 2026 Free 8K Downloader · Download only content you own or have permission to save. · <a href="privacy.html">Privacy</a></div></footer>
+<script>
+// price, buy link and payment text come from update.json (edit it with the Control Panel)
+fetch('update.json', { cache: 'no-store' }).then(r => r.json()).then(j => {
+  const b = j.buy || {};
+  // price: one field in the Control Panel ("amount", e.g. $4.99)
+  const amt = b.amount || ((String(b.price || '').match(/\$\s*\d{1,4}(?:[.,]\d{1,2})?/) || [''])[0].replace(/\s/g, ''));
+  if (amt) { document.getElementById('price').textContent = amt; document.getElementById('buy').textContent = 'Buy Pro · ' + amt; }
+  // "checkout" = your payment page (Lemon Squeezy checkout link)
+  if (b.checkout) document.getElementById('buy').href = b.checkout;
+  if (b.text) document.getElementById('howpay').textContent = b.text;
+  if (j.latest && j.latest.url) document.getElementById('winBtn').href = j.latest.url;
+  if (j.latestMac && j.latestMac.url) document.getElementById('macBtn').href = j.latestMac.url;
+  if (/^https:\/\/(apps|www)\.microsoft\.com\//.test(j.windowsStore || '')) { const sb = document.getElementById('storeBtn'); sb.href = j.windowsStore; sb.hidden = false; document.getElementById('storeTip').hidden = false; }
+}).catch(() => {});
+</script>
+</body>
+</html>
