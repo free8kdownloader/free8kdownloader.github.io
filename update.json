@@ -1,14 +1,22 @@
 {
   "latest": {
     "version": "2.0.4",
-    "url": "",
-    "sha256": "",
-    "size": 0,
-    "notes": "",
+    "url": "https://github.com/free8kdownloader/free8kdownloader.github.io/releases/download/v2.0.4/Free8KDownloader-Setup-2.0.4.exe",
+    "sha256": "a6c03883eace329106185f80fb21c935f18c27fe03eafcca922e3429f8f542f0",
+    "size": 2766217,
+    "notes": "Safer installer, verified engine downloads, download help on the website.",
     "mandatory": false,
     "minVersion": ""
   },
-  "latestMac": {},
+  "latestMac": {
+    "version": "2.0.4",
+    "url": "https://github.com/free8kdownloader/free8kdownloader.github.io/releases/download/v2.0.4/Free8KDownloader-2.0.4-mac.zip",
+    "sha256": "c8864f6a5f139f2c0ca1676f09e86fed28c1b904245fe1b91997ad8c20d34bb1",
+    "size": 6467112,
+    "notes": "Safer installer, verified engine downloads, download help on the website.",
+    "mandatory": false,
+    "minVersion": ""
+  },
   "message": {},
   "sponsors": [],
   "sponsorRotateSeconds": 30,
