@@ -17,6 +17,7 @@
     "mandatory": false,
     "minVersion": ""
   },
+  "downloadWin": "https://github.com/free8kdownloader/free8kdownloader.github.io/releases/download/v2.0.4/Free8KDownloader-Windows-2.0.4.zip",
   "message": {},
   "sponsors": [],
   "sponsorRotateSeconds": 30,

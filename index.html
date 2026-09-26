@@ -68,8 +68,8 @@ footer a { color: var(--ink2); }
   <h1>Paste a link. Get the <em>original</em>.</h1>
   <p>Video in its original resolution up to 8K, audio exactly as the original or MP3 320 kbps, and full-size images from YouTube, Facebook, Instagram, TikTok and 1,800+ sites.</p>
   <div class="dl" id="download">
-    <a class="btn" href="https://github.com/free8kdownloader/free8kdownloader.github.io/releases/latest/download/Free8KDownloader-Setup.exe" id="winBtn">Download for Windows<small>Windows 10 / 11 · 64-bit</small></a>
-    <a class="btn mac" href="https://github.com/free8kdownloader/free8kdownloader.github.io/releases/latest/download/Free8KDownloader-mac.zip" id="macBtn">Download for Mac<small>macOS 11+ · Apple Silicon & Intel</small></a>
+    <a class="btn" href="https://github.com/free8kdownloader/free8kdownloader.github.io/releases/download/v2.0.4/Free8KDownloader-Windows-2.0.4.zip" id="winBtn">Download for Windows<small>Windows 10 / 11 · 64-bit</small></a>
+    <a class="btn mac" href="https://github.com/free8kdownloader/free8kdownloader.github.io/releases/download/v2.0.4/Free8KDownloader-2.0.4-mac.zip" id="macBtn">Download for Mac<small>macOS 11+ · Apple Silicon & Intel</small></a>
     <a class="btn store" href="#" id="storeBtn" hidden>Get it from Microsoft<small>Microsoft Store · no warnings, automatic updates</small></a>
   </div>
   <details class="help" id="installHelp">
@@ -124,7 +124,8 @@ fetch('update.json', { cache: 'no-store' }).then(r => r.json()).then(j => {
   // "checkout" = your payment page (Lemon Squeezy checkout link)
   if (b.checkout) document.getElementById('buy').href = b.checkout;
   if (b.text) document.getElementById('howpay').textContent = b.text;
-  if (j.latest && j.latest.url) document.getElementById('winBtn').href = j.latest.url;
+  // website download = the .zip (browsers don't block it); the app's own updater uses latest.url
+  if (j.downloadWin) document.getElementById('winBtn').href = j.downloadWin;
   if (j.latestMac && j.latestMac.url) document.getElementById('macBtn').href = j.latestMac.url;
   if (/^https:\/\/(apps|www)\.microsoft\.com\//.test(j.windowsStore || '')) { const sb = document.getElementById('storeBtn'); sb.href = j.windowsStore; sb.hidden = false; document.getElementById('storeTip').hidden = false; }
 }).catch(() => {});
@@ -132,14 +133,10 @@ fetch('update.json', { cache: 'no-store' }).then(r => r.json()).then(j => {
 // step-by-step help when a download starts (browsers warn about new apps)
 (function () {
   const ua = navigator.userAgent, edge = /Edg\//.test(ua);
-  const win = edge ? [
-    'If the Downloads panel says <b>"isn\'t commonly downloaded"</b>, point at the file and click <kbd>…</kbd> (or <kbd>See more</kbd>), then <kbd>Keep</kbd>.',
-    'Click <kbd>Show more</kbd> and then <kbd>Keep anyway</kbd>.',
-    'Open the file. If Windows says <b>"Windows protected your PC"</b>, click <kbd>More info</kbd> and then <kbd>Run anyway</kbd>.'
-  ] : [
-    'If Chrome says <b>"isn\'t commonly downloaded"</b> or <b>"may be dangerous"</b>, open the Downloads list (<kbd>Ctrl</kbd>+<kbd>J</kbd>) and click <kbd>Keep</kbd> (or <kbd>Download suspicious file</kbd>).',
-    'Open the file. If Windows says <b>"Windows protected your PC"</b>, click <kbd>More info</kbd> and then <kbd>Run anyway</kbd>.',
-    'Follow the setup. It takes about a minute.'
+  const win = [
+    'Open the downloaded <b>.zip</b> file (click it in your browser\'s Downloads list) and double-click <b>Free8KDownloader-Setup</b>.',
+    'If Windows says <b>"Windows protected your PC"</b>, click <kbd>More info</kbd> and then <kbd>Run anyway</kbd>.',
+    'Follow the setup. It takes about a minute.<br><small>If the browser says <b>"isn\'t commonly downloaded"</b>, choose <kbd>Keep</kbd>' + (edge ? ' (click <kbd>…</kbd> or <kbd>See more</kbd> first), then <kbd>Keep anyway</kbd>.' : '.') + '</small>'
   ];
   const mac = [
     'Open the downloaded .zip file and drag <b>Free 8K Downloader</b> into <b>Applications</b>.',
