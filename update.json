@@ -4,7 +4,7 @@
     "url": "https://github.com/free8kdownloader/free8kdownloader.github.io/releases/download/v2.0.7/Free8KDownloader-Setup-2.0.7.exe",
     "sha256": "241d1d09e069b22da0f2c39e331533d901b8eeb4b8a5c8a4dddafb95710bfded",
     "size": 2773180,
-    "notes": "Free: audio up to 128 kbps. Pro: original audio, 320 kbps and lossless.",
+    "notes": "Faster, smoother downloads and a more polished app.",
     "mandatory": false,
     "minVersion": ""
   },
@@ -13,7 +13,7 @@
     "url": "https://github.com/free8kdownloader/free8kdownloader.github.io/releases/download/v2.0.7/Free8KDownloader-2.0.7-mac.zip",
     "sha256": "2356cb4662523d049096828d6054e542f72f5e9d8031e66a8755d02548dd6f86",
     "size": 6482391,
-    "notes": "Free: audio up to 128 kbps. Pro: original audio, 320 kbps and lossless.",
+    "notes": "Faster, smoother downloads and a more polished app.",
     "mandatory": false,
     "minVersion": ""
   },
